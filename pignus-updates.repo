@@ -1,0 +1,32 @@
+[updates]
+name=Pignus $releasever - $basearch - Updates
+failovermethod=priority
+baseurl=https://pignus.computer/pub/linux/pignus/updates/$releasever/Everything/$basearch/os/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-f$releasever&arch=$basearch
+enabled=0
+gpgcheck=0
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-pignus-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-debuginfo]
+name=Pignus $releasever - $basearch - Updates - Debug
+failovermethod=priority
+baseurl=https://pignus.computer/pub/linux/pignus/updates/$releasever/Everything/$basearch/debug/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-debug-f$releasever&arch=$basearch
+enabled=0
+gpgcheck=0
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-pignus-$releasever-$basearch
+skip_if_unavailable=False
+
+[updates-source]
+name=Pignus $releasever - Updates Source
+failovermethod=priority
+baseurl=https://pignus.computer/pub/linux/pignus/updates/$releasever/Everything/source/SRPMS/
+#metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch
+enabled=0
+gpgcheck=0
+metadata_expire=6h
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-pignus-$releasever-$basearch
+skip_if_unavailable=False
